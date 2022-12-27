@@ -20,7 +20,7 @@ textEditor.addEventListener('keyup', () => {
 
 function updateTextEditor(text) {
     textEditor.value = text;
-}
+};
 
 deleteButton.addEventListener('click', () => {
     socketFunctions.emitDeleteEvent(documentName);
@@ -31,6 +31,6 @@ function alertAndRedirect(documentNameParam) {
         alert(`${documentName} excluido!`);
         window.location.href = '/';
     }
-}
+};
 
 export { updateTextEditor, alertAndRedirect };

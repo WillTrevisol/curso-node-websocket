@@ -36,7 +36,6 @@ io.on('connection', (socket) => {
     socket.on('text_editor', async ({text, documentName}) => {
         const update = await updateDocument(documentName, text);
 
-        console.log(update.modifiedCount);
         if (update.modifiedCount) {
             socket.to(documentName).emit('text_to_clients', text);
         }
@@ -48,5 +47,5 @@ io.on('connection', (socket) => {
         if (result.deletedCount) {
             io.emit('delete_document_success', documentName);
         }
-    })
+    });
 });

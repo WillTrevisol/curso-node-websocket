@@ -19,12 +19,12 @@ function insertDocumentLink(documentName) {
         ${documentName}
     </a>
     `
-}
+};
 
 function removeDocumentLink(documentName) {
     const documentId = document.getElementById(`document-${documentName}`)
 
     documentsList.removeChild(documentId);
-}
+};
 
 export { insertDocumentLink, removeDocumentLink};

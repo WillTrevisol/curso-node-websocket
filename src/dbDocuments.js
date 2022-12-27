@@ -4,7 +4,7 @@ async function getDocuments() {
     const documents = await documentsCollection.find().toArray();
 
     return documents;
-}
+};
 
 async function addDocument(documentName) {
     const result = await documentsCollection.insertOne({
@@ -13,7 +13,7 @@ async function addDocument(documentName) {
     });
 
     return result;
-}
+};
 
 async function findDocument(documentName) {
     const document = await documentsCollection.findOne({
@@ -21,7 +21,7 @@ async function findDocument(documentName) {
     });
 
     return document;
-}
+};
 
 async function updateDocument(documentName, textValue) {
     const update = await documentsCollection.updateOne(
@@ -36,7 +36,7 @@ async function updateDocument(documentName, textValue) {
     );
 
     return update;
-}
+};
 
 async function deleteDocument(documentName) {
     const result = await documentsCollection.deleteOne({
@@ -44,6 +44,6 @@ async function deleteDocument(documentName) {
     });
 
     return result;
-}
+};
 
 export { findDocument, updateDocument, getDocuments, addDocument, deleteDocument };

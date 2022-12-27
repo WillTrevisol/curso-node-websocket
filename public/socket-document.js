@@ -8,11 +8,11 @@ function selectDocument(name) {
         updateTextEditor(text);
     });
 
-}
+};
 
 function socketEmitText(data) {
     socket.emit('text_editor', data);
-}
+};
 
 socket.on('text_to_clients', (value) => {
     updateTextEditor(value);
@@ -20,7 +20,7 @@ socket.on('text_to_clients', (value) => {
 
 function emitDeleteEvent(documentName) {
     socket.emit('delete_document', documentName);
-}
+};
 
 socket.on('delete_document_success', (documentName) => {
     alertAndRedirect(documentName);

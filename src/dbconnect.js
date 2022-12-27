@@ -13,7 +13,7 @@ try {
     const db = client.db('CursoNode');
     documentsCollection = db.collection('curso_socket');
 
-    console.log(chalk.greenBright('Banco conectado com sucesso.'));
+    console.log(chalk.yellowBright('Banco conectado com sucesso.'));
 
 } catch (error) {
     console.log(chalk.red(`${error} - Falha de conexão.`));
